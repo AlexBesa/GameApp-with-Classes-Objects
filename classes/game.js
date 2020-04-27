@@ -8,7 +8,6 @@ function GameModel(id, title, imageUrl,description,apiInstance) {
 GameModel.prototype.createDomElement = function()  {
     var container1 = document.querySelector('.container');
     const gameELement = document.createElement("div");
-
     gameELement.innerHTML = `
         <div id="${this._id}">
             <h1>${this.title}</h1> 
@@ -17,7 +16,6 @@ GameModel.prototype.createDomElement = function()  {
             <button id="delete-${this._id}" class="delete-btn">Delete Game</button>
             <button id="edit-${this._id}" class="edit-btn">Edit Game</button>
         </div>`;    
-
     container1.appendChild(gameELement);
 
     document
